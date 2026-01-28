@@ -1,0 +1,6 @@
+
+{
+  "name": "Domain Information Checker",
+  "description": "A professional-grade tool to check domain WHOIS data, IP addresses, and AI-powered safety analysis using Google Gemini.",
+  "requestFramePermissions": []
+}
