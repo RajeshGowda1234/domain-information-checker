@@ -148,7 +148,7 @@ ${JSON.stringify(domainData, null, 2)}
 Based ONLY on this data, provide a risk assessment. Consider: domain age (creation/expiry), registrar reputation, use of privacy protection, name servers, and status. Return valid JSON only.`;
 
     const res = await ai.models.generateContent({
-      model: 'gemini-1.5-flash',
+      model: 'gemini-2.5-flash',
       contents: prompt,
       config: {
         responseMimeType: 'application/json',
