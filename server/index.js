@@ -245,6 +245,14 @@ app.use((err, req, res, next) => {
   });
 });
 
+// Serve static frontend files from the Vite build output folder ('dist')
+app.use(express.static(path.join(root, 'dist')));
+
+// Catch-all route to serve the React app for any other requests (for client-side routing, if any)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(root, 'dist', 'index.html'));
+});
+
 app.listen(PORT, () => {
-  console.log(`[server] Domain API running on http://localhost:${PORT}`);
+  console.log(`[server] Domain API and Frontend running on http://localhost:${PORT}`);
 });
